@@ -41,6 +41,10 @@
         <input type="checkbox" id="topping3" name="topping3" value="Mushrooms"><br>
         <label for="topping4">Onions</label>
         <input type="checkbox" id="topping4" name="topping4" value="Onions"><br>
+        <label for="topping5">Cheese</label>
+        <input type="checkbox" id="topping5" name="topping5" value="Cheese"><br>
+        <label for="topping6">Jalapenos</label>
+        <input type="checkbox" id="topping6" name="topping6" value="Jalapenos"><br>
         <br>
         <label for="address">Enter your delivery address:</label>
         <input type="text" id="address" name="address"><br>

@@ -19,7 +19,9 @@ public class PizzaOrderServlet extends HttpServlet {
             String[] toppings = {req.getParameter("topping1"),
                     req.getParameter("topping2"),
                     req.getParameter("topping3"),
-                    req.getParameter("topping4")};
+                    req.getParameter("topping4"),
+                    req.getParameter("topping5"),
+                    req.getParameter("topping6"),};
 
 
             System.out.println("Crust: " + crust);
