@@ -23,7 +23,7 @@ public class RetrieveAndProcessAnswerServlet extends HttpServlet {
 
         int randomInt = (int)(Math.random() * 3 + 1);
 
-        System.out.println(randomInt);
+        System.out.println("You were supposed to guess: " + randomInt);
 
 //        req.setAttribute("correctAnswer", randomInt);
 //

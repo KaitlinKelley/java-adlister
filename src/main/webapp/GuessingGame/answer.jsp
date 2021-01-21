@@ -12,6 +12,6 @@
 </head>
 <body>
     <h1>${message}</h1>
-    <h1>You were supposed to guess: ${correctAnswer}</h1>
+<%--    <h1>You were supposed to guess: ${correctAnswer}</h1>--%>
 </body>
 </html>
