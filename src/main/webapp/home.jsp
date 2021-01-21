@@ -9,9 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--JSP tags process in the server, NOT the browser!!!!--%>
 <%--Browser doesn't care about server-size logic--%>
-<% request.setAttribute("number", 1); %>
-<% request.setAttribute("title", "Home Page"); %>
-<% request.setAttribute("isLoggedIn", true); %>
+
 <html>
 <head>
     <title>${title}</title>

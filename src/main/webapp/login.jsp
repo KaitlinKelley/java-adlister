@@ -15,7 +15,7 @@
         String password = request.getParameter("password");
 
         if(username.equals("admin") && password.equals("password")){
-            response.sendRedirect("/profile");
+            response.sendRedirect("/profile.jsp");
         }
     }
 
@@ -31,10 +31,10 @@
 
     <form method="POST" action="login.jsp">
         <label for="username">Username</label>
-        <input type="text" id="username">
+        <input type="text" id="username" name="username">
 
         <label for="password">Password</label>
-        <input type="password" id="password">
+        <input type="password" id="password" name="password">
 
         <button type="submit">Submit</button>
     </form>
