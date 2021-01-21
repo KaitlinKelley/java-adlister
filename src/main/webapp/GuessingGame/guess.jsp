@@ -11,7 +11,7 @@
     <title>Guessing Game</title>
 </head>
 <body>
-    <form action="/answer" method="POST">
+    <form action="/guess" method="POST">
         <label for="user-guess">Please enter a number between 1 and 3, inclusive:</label>
         <input type="text" id="user-guess" name="user-guess">
     </form>

@@ -11,8 +11,7 @@
     <title>Answer Page</title>
 </head>
 <body>
-    <h1>You guessed: </h1>
-    <h1>You are: </h1>
-
+    <h1>${message}</h1>
+    <h1>You were supposed to guess: ${correctAnswer}</h1>
 </body>
 </html>
