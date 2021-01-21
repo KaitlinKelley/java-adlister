@@ -34,17 +34,17 @@
         </select>
         <h4>Pick your toppings:</h4>
         <label for="topping1">Pepperoni</label>
-        <input type="checkbox" id="topping1" name="topping1" value="Pepperoni"><br>
+        <input type="checkbox" id="topping1" name="topping" value="Pepperoni"><br>
         <label for="topping2">Sausage</label>
-        <input type="checkbox" id="topping2" name="topping2" value="Sausage"><br>
+        <input type="checkbox" id="topping2" name="topping" value="Sausage"><br>
         <label for="topping3">Mushrooms</label>
-        <input type="checkbox" id="topping3" name="topping3" value="Mushrooms"><br>
+        <input type="checkbox" id="topping3" name="topping" value="Mushrooms"><br>
         <label for="topping4">Onions</label>
-        <input type="checkbox" id="topping4" name="topping4" value="Onions"><br>
+        <input type="checkbox" id="topping4" name="topping" value="Onions"><br>
         <label for="topping5">Cheese</label>
-        <input type="checkbox" id="topping5" name="topping5" value="Cheese"><br>
+        <input type="checkbox" id="topping5" name="topping" value="Cheese"><br>
         <label for="topping6">Jalapenos</label>
-        <input type="checkbox" id="topping6" name="topping6" value="Jalapenos"><br>
+        <input type="checkbox" id="topping6" name="topping" value="Jalapenos"><br>
         <br>
         <label for="address">Enter your delivery address:</label>
         <input type="text" id="address" name="address"><br>

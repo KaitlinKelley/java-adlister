@@ -9,6 +9,7 @@ import java.io.IOException;
 public class CorrectServlet extends HttpServlet {
 
     @Override
+    //we get here via a redirect, which is a get request, so we use doGet
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String message = "Yay! You win!";

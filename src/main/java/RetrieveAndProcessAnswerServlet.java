@@ -18,10 +18,8 @@ public class RetrieveAndProcessAnswerServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String userGuess = req.getParameter("user-guess");
-
         int userInt = Integer.parseInt(userGuess);
-
-        int randomInt = (int)(Math.random() * 3 + 1);
+        int randomInt = (int)(Math.random() * 3) + 1;
 
         System.out.println("You were supposed to guess: " + randomInt);
 
