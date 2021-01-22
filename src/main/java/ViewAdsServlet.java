@@ -9,6 +9,7 @@ import java.util.List;
 @WebServlet(name = "ViewAdsServlet", urlPatterns = "/ads")
 public class ViewAdsServlet extends HttpServlet {
     @Override
+    //this runs whenever you go to /ads
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Ads ListAdsDao = DaoFactory.getAdsDao();
 

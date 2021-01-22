@@ -18,6 +18,7 @@
         <div class="ad">
             <h3>${ad.title}</h3>
             <h4>${ad.description}</h4>
+            <h5>Posted by user: ${ad.userId}</h5>
             <br>
         </div>
     </c:forEach>
