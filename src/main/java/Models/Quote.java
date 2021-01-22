@@ -1,11 +1,12 @@
+package Models;
+
 public class Quote {
 
     private long id;
+    private Author author;
     private String content;
-    private long authorId;
-    private String author;
 
-    public Quote(){};
+    public Quote(){}
 
     public long getId() {
         return id;
@@ -23,19 +24,11 @@ public class Quote {
         this.content = content;
     }
 
-    public long getAuthorId() {
-        return authorId;
-    }
-
-    public void setAuthorId(long authorId) {
-        this.authorId = authorId;
-    }
-
-    public String getAuthor() {
+    public Author getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(Author author) {
         this.author = author;
     }
 }

@@ -1,10 +1,12 @@
+package Models;
+
 public class Author {
 
     private long id;
     private String firstName;
     private String lastName;
 
-    public Author(){};
+    public Author(){}
 
     public long getId() {
         return id;

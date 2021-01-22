@@ -1,15 +1,15 @@
-import java.util.Date;
+package Models;
 
 public class Album {
 
     private long id;
     private String artist;
     private String name;
-    private Date releaseDate;
+    private int releaseDate;
     private float sales;
     private String genre;
 
-    public Album(){};
+    public Album(){}
 
     public long getId() {
         return id;
@@ -35,11 +35,11 @@ public class Album {
         this.name = name;
     }
 
-    public Date getReleaseDate() {
+    public int getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(Date releaseDate) {
+    public void setReleaseDate(int releaseDate) {
         this.releaseDate = releaseDate;
     }
 
