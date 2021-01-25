@@ -27,7 +27,6 @@ public class LoginServlet extends HttpServlet {
 
         if (validAttempt) {
             session.setAttribute("user", "whatever your name is...");
-            String user = (String) session.getAttribute("user");
             response.sendRedirect("/profile");
         } else {
             response.sendRedirect("/login");
