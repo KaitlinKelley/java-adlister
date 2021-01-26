@@ -9,11 +9,18 @@ import java.io.IOException;
 @WebServlet(name = "LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        if (session.getAttribute("user") != null) {
-            response.sendRedirect("/profile");
-        }else {
+        try {
+            HttpSession session = request.getSession();
+            boolean isLoggedIn = (boolean) session.getAttribute("isLoggedIn");
+            if (isLoggedIn) {
+                response.sendRedirect("/profile");
+            } else {
+                request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+            }
+        }catch(Exception e){
+            e.printStackTrace();
             request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+
         }
     }
 
@@ -26,6 +33,7 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
 
         if (validAttempt) {
+            session.setAttribute("isLoggedIn", true);
             session.setAttribute("user", "whatever your name is...");
             response.sendRedirect("/profile");
         } else {
