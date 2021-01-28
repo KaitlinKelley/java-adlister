@@ -64,6 +64,20 @@ public class MySQLUsersDao implements Users{
         }
     }
 
+    public String getPassword(User user){
+        try{
+            PreparedStatement stmt = createFindPasswordQuery(user);
+            stmt.setString(1, user.getPassword());
+            stmt.executeQuery();
+            ResultSet passwordResultSet = stmt.getResultSet();
+            passwordResultSet.next();
+            return passwordResultSet.getString(1);
+
+        }catch (SQLException e) {
+            throw new RuntimeException("Error at getPassword", e);
+        }
+    }
+
 
     private PreparedStatement createInsertQuery(User user) {
         String sql = "INSERT INTO users(id, username, email, password) VALUES (?, ?, ?, ?)";
@@ -72,6 +86,17 @@ public class MySQLUsersDao implements Users{
             stmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
         } catch (SQLException e) {
             throw new RuntimeException("Error at createInsertQuery", e);
+        }
+        return stmt;
+    }
+
+    private PreparedStatement createFindPasswordQuery(User user){
+        String sql = "SELECT password FROM users WHERE password = ?";
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error at createFindPasswordQuery", e);
         }
         return stmt;
     }
