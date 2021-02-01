@@ -64,7 +64,7 @@ public class MySQLUsersDao implements Users{
         }
     }
 
-    public String getPassword(User user){
+    public String extractPassword(User user){
         try{
             PreparedStatement stmt = createFindPasswordQuery(user);
             stmt.setString(1, user.getPassword());
